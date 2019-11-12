@@ -25,7 +25,7 @@ export interface TranscodeResult {
 /**
  * @name Transcoder
  * @description
- * This plugin does something
+ * This plugin can transcode video files on Android and iOS.
  *
  * @usage
  * ```typescript
@@ -37,7 +37,7 @@ export interface TranscodeResult {
  * ...
  *
  *
- * this.transcoder.transcode({fileUri: fileUri, outputFileName: "Transcoded", width: TranscodePresets.NonWideScreen.Width, height: TranscodePresets.NonWideScreen.Height})
+ * this.transcoder.transcode({fileUri: fileUri, outputFileName: "Transcoded", width: this.transcoder.TranscodePresets.NonWideScreen.Width, height: this.transcoder.TranscodePresets.NonWideScreen.Height})
  *   .then((res: any) => console.log(res))
  *   .catch((error: any) => console.error(error));
  *
