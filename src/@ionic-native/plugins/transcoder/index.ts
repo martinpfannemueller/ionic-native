@@ -37,7 +37,7 @@ export interface TranscodeResult {
  * ...
  *
  *
- * this.transcoder.functionName('Hello', 123)
+ * this.transcoder.transcode({fileUri: fileUri, outputFileName: "Transcoded", width: TranscodePresets.NonWideScreen.Width, height: TranscodePresets.NonWideScreen.Height})
  *   .then((res: any) => console.log(res))
  *   .catch((error: any) => console.error(error));
  *
@@ -74,7 +74,7 @@ export class Transcoder extends IonicNativePlugin {
    * @returns {Promise<string>} Returns a promise that resolves to the transcode result including the progress and the path of the transcoded video
    */
   @Cordova()
-  transcodeVideo(options: TranscodeOptions): Promise<TranscodeResult> {
+  transcode(options: TranscodeOptions): Promise<TranscodeResult> {
     return;
   }
 
